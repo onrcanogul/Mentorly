@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mentorly - Mentorluk Uygulaması</title>
+
+    <!-- Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Poppins Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+
+      .fade-in {
+        animation: fadeIn 1.5s ease-in-out;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-black text-white">
+    <!-- Hero Section -->
+    <section class="text-center py-20">
+      <h1
+        class="text-5xl font-bold mb-4 text-white animate__animated animate__fadeInDown"
+        style="--animate-duration: 1s"
+      >
+        Mentorly
+      </h1>
+      <p
+        class="text-xl text-yellow-400 mb-6 animate__animated animate__fadeInUp"
+        style="--animate-duration: 1.5s"
+      >
+        İhtiyacın Olan Mentorluk, Sadece Bir Eşleşme Uzağında.
+      </p>
+      <a
+        href="#"
+        class="bg-yellow-400 text-black py-3 px-6 rounded-full hover:bg-yellow-300 transition animate__animated animate__fadeInUp"
+        style="--animate-duration: 2s"
+      >
+        Hemen Başla
+      </a>
+    </section>
+
+    <!-- Özellikler -->
+    <section class="max-w-6xl mx-auto px-4 py-16">
+      <h2 class="text-3xl font-bold text-center mb-12 text-white">
+        Uygulama Özellikleri
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div
+          class="bg-gray-900 p-6 rounded-lg shadow hover:shadow-xl transition"
+        >
+          <h3 class="text-xl font-bold mb-2 text-yellow-400">
+            Eşleşme Sistemi
+          </h3>
+          <p class="text-gray-300">
+            Akıllı algoritmalarla doğru mentor ile eşleş.
+          </p>
+        </div>
+        <div
+          class="bg-gray-900 p-6 rounded-lg shadow hover:shadow-xl transition"
+        >
+          <h3 class="text-xl font-bold mb-2 text-yellow-400">
+            Sohbet ve Mesajlaşma
+          </h3>
+          <p class="text-gray-300">
+            Gerçek zamanlı mesajlaşma sistemi ile iletişim kur.
+          </p>
+        </div>
+        <div
+          class="bg-gray-900 p-6 rounded-lg shadow hover:shadow-xl transition"
+        >
+          <h3 class="text-xl font-bold mb-2 text-yellow-400">AI Asistan</h3>
+          <p class="text-gray-300">
+            Yapay zeka destekli danışmanla 7/24 destek al.
+          </p>
+        </div>
+        <div
+          class="bg-gray-900 p-6 rounded-lg shadow hover:shadow-xl transition"
+        >
+          <h3 class="text-xl font-bold mb-2 text-yellow-400">
+            Kategori Seçimi
+          </h3>
+          <p class="text-gray-300">
+            İlgili alanlara göre mentorluk fırsatları.
+          </p>
+        </div>
+        <div
+          class="bg-gray-900 p-6 rounded-lg shadow hover:shadow-xl transition"
+        >
+          <h3 class="text-xl font-bold mb-2 text-yellow-400">Bildirimler</h3>
+          <p class="text-gray-300">Anlık bildirimlerle hiçbir şeyi kaçırma.</p>
+        </div>
+        <div
+          class="bg-gray-900 p-6 rounded-lg shadow hover:shadow-xl transition"
+        >
+          <h3 class="text-xl font-bold mb-2 text-yellow-400">
+            Profil Yönetimi
+          </h3>
+          <p class="text-gray-300">
+            Bilgilerini düzenle, deneyimlerini öne çıkar.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nasıl Çalışır -->
+    <section class="bg-gray-900 py-16 px-4">
+      <h2 class="text-3xl font-bold text-center mb-12 text-white">
+        Nasıl Çalışır?
+      </h2>
+      <div
+        class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center"
+      >
+        <div>
+          <div class="text-4xl mb-2">📝</div>
+          <h3 class="text-xl font-semibold mb-2 text-yellow-400">
+            1. Kayıt Ol
+          </h3>
+          <p class="text-gray-300">Profilini oluştur, yeteneklerini belirle.</p>
+        </div>
+        <div>
+          <div class="text-4xl mb-2">🔍</div>
+          <h3 class="text-xl font-semibold mb-2 text-yellow-400">2. Eşleş</h3>
+          <p class="text-gray-300">İlgili mentor veya menti ile eşleş.</p>
+        </div>
+        <div>
+          <div class="text-4xl mb-2">💬</div>
+          <h3 class="text-xl font-semibold mb-2 text-yellow-400">
+            3. Sohbet Et
+          </h3>
+          <p class="text-gray-300">İletişime geç, öğrenmeye başla!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SSS -->
+    <section class="max-w-4xl mx-auto px-4 py-16">
+      <h2 class="text-3xl font-bold text-center mb-10 text-white">
+        Sıkça Sorulan Sorular
+      </h2>
+      <div class="space-y-4">
+        <details class="bg-gray-900 p-4 rounded-lg">
+          <summary class="cursor-pointer font-semibold text-yellow-400">
+            Mentorly ücretsiz mi?
+          </summary>
+          <p class="mt-2 text-gray-300">
+            Evet, Mentorly temel kullanımı tamamen ücretsizdir.
+          </p>
+        </details>
+        <details class="bg-gray-900 p-4 rounded-lg">
+          <summary class="cursor-pointer font-semibold text-yellow-400">
+            Nasıl mentor olabilirim?
+          </summary>
+          <p class="mt-2 text-gray-300">
+            Profilini oluşturduktan sonra mentor olarak başvuru yapabilirsin.
+          </p>
+        </details>
+        <details class="bg-gray-900 p-4 rounded-lg">
+          <summary class="cursor-pointer font-semibold text-yellow-400">
+            AI asistan nedir?
+          </summary>
+          <p class="mt-2 text-gray-300">
+            AI asistan, mentorluk hizmeti alamadığın zamanlarda sana yardımcı
+            olur.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-500 text-center py-6">
+      <p>&copy; 2025 Mentorly | Tüm Hakları Saklıdır</p>
+    </footer>
+  </body>
+</html>
