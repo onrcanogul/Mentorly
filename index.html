@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mentorly - Mentorluk Uygulaması</title>
+    <title>Mentorly - Mentorship Platform</title>
 
     <!-- Tailwind CSS -->
     <link
@@ -11,187 +11,231 @@
       rel="stylesheet"
     />
 
-    <!-- Poppins Font -->
+    <!-- AOS Animation Library -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
     <style>
+      html {
+        scroll-behavior: smooth;
+      }
       body {
         font-family: "Poppins", sans-serif;
+        background-color: #0f0f0f;
+        color: white;
+        overflow-x: hidden;
       }
-
-      .fade-in {
-        animation: fadeIn 1.5s ease-in-out;
+      .gradient-text {
+        background: linear-gradient(to right, #ffc107, #ffeb3b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
-
-      @keyframes fadeIn {
-        0% {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
+      .btn-hover:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(255, 193, 7, 0.3);
       }
     </style>
   </head>
-  <body class="bg-black text-white">
+  <body>
+    <!-- Navbar -->
+    <nav class="flex items-center justify-between px-8 py-6 max-w-7xl mx-auto">
+      <div class="text-3xl font-bold gradient-text">Mentorly</div>
+      <div class="space-x-6 hidden md:flex">
+        <a href="#features" class="text-gray-300 hover:text-white">Features</a>
+        <a href="#how-it-works" class="text-gray-300 hover:text-white"
+          >How It Works</a
+        >
+        <a href="#faq" class="text-gray-300 hover:text-white">FAQ</a>
+        <a href="#contact" class="text-gray-300 hover:text-white">Contact</a>
+      </div>
+    </nav>
+
     <!-- Hero Section -->
-    <section class="text-center py-20">
-      <h1
-        class="text-5xl font-bold mb-4 text-white animate__animated animate__fadeInDown"
-        style="--animate-duration: 1s"
-      >
-        Mentorly
+    <section class="text-center py-24 px-6 md:px-0">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">
+        <span class="gradient-text">The New Era</span> of Mentorship
       </h1>
-      <p
-        class="text-xl text-yellow-400 mb-6 animate__animated animate__fadeInUp"
-        style="--animate-duration: 1.5s"
-      >
-        İhtiyacın Olan Mentorluk, Sadece Bir Eşleşme Uzağında.
+      <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+        The mentorship you need is just one
+        <span class="text-yellow-400 font-semibold">match</span> away.
       </p>
-      <a
-        href="#"
-        class="bg-yellow-400 text-black py-3 px-6 rounded-full hover:bg-yellow-300 transition animate__animated animate__fadeInUp"
-        style="--animate-duration: 2s"
-      >
-        Hemen Başla
-      </a>
+      <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+        <a
+          href="#"
+          class="bg-yellow-400 text-black py-3 px-6 rounded-full font-medium text-lg btn-hover"
+          >Get Started</a
+        >
+        <a
+          href="#how-it-works"
+          class="border border-yellow-400 text-white py-3 px-6 rounded-full text-lg hover:bg-yellow-400 hover:text-black transition-all"
+          >How It Works?</a
+        >
+      </div>
     </section>
 
-    <!-- Özellikler -->
-    <section class="max-w-6xl mx-auto px-4 py-16">
-      <h2 class="text-3xl font-bold text-center mb-12 text-white">
-        Uygulama Özellikleri
-      </h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        <div
-          class="bg-gray-900 p-6 rounded-lg shadow hover:shadow-xl transition"
-        >
-          <h3 class="text-xl font-bold mb-2 text-yellow-400">
-            Eşleşme Sistemi
-          </h3>
-          <p class="text-gray-300">
-            Akıllı algoritmalarla doğru mentor ile eşleş.
-          </p>
-        </div>
-        <div
-          class="bg-gray-900 p-6 rounded-lg shadow hover:shadow-xl transition"
-        >
-          <h3 class="text-xl font-bold mb-2 text-yellow-400">
-            Sohbet ve Mesajlaşma
-          </h3>
-          <p class="text-gray-300">
-            Gerçek zamanlı mesajlaşma sistemi ile iletişim kur.
-          </p>
-        </div>
-        <div
-          class="bg-gray-900 p-6 rounded-lg shadow hover:shadow-xl transition"
-        >
-          <h3 class="text-xl font-bold mb-2 text-yellow-400">AI Asistan</h3>
-          <p class="text-gray-300">
-            Yapay zeka destekli danışmanla 7/24 destek al.
-          </p>
-        </div>
-        <div
-          class="bg-gray-900 p-6 rounded-lg shadow hover:shadow-xl transition"
-        >
-          <h3 class="text-xl font-bold mb-2 text-yellow-400">
-            Kategori Seçimi
-          </h3>
-          <p class="text-gray-300">
-            İlgili alanlara göre mentorluk fırsatları.
-          </p>
-        </div>
-        <div
-          class="bg-gray-900 p-6 rounded-lg shadow hover:shadow-xl transition"
-        >
-          <h3 class="text-xl font-bold mb-2 text-yellow-400">Bildirimler</h3>
-          <p class="text-gray-300">Anlık bildirimlerle hiçbir şeyi kaçırma.</p>
-        </div>
-        <div
-          class="bg-gray-900 p-6 rounded-lg shadow hover:shadow-xl transition"
-        >
-          <h3 class="text-xl font-bold mb-2 text-yellow-400">
-            Profil Yönetimi
-          </h3>
-          <p class="text-gray-300">
-            Bilgilerini düzenle, deneyimlerini öne çıkar.
-          </p>
+    <!-- Features -->
+    <section id="features" class="bg-gray-900 py-20 px-8">
+      <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 gradient-text">
+          Powerful Features
+        </h2>
+        <p class="text-gray-300 text-lg mb-12">
+          Explore the benefits Mentorly offers.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-gray-800 p-6 rounded-lg hover:shadow-xl transition">
+            <h3 class="text-yellow-400 text-xl font-bold mb-2">
+              Smart Matching
+            </h3>
+            <p class="text-gray-300">
+              Find the best mentors through AI-powered matching.
+            </p>
+          </div>
+          <div class="bg-gray-800 p-6 rounded-lg hover:shadow-xl transition">
+            <h3 class="text-yellow-400 text-xl font-bold mb-2">
+              Real-Time Messaging
+            </h3>
+            <p class="text-gray-300">
+              Connect instantly and strengthen your network.
+            </p>
+          </div>
+          <div class="bg-gray-800 p-6 rounded-lg hover:shadow-xl transition">
+            <h3 class="text-yellow-400 text-xl font-bold mb-2">AI Assistant</h3>
+            <p class="text-gray-300">
+              Get support even when your mentor is offline.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Nasıl Çalışır -->
-    <section class="bg-gray-900 py-16 px-4">
-      <h2 class="text-3xl font-bold text-center mb-12 text-white">
-        Nasıl Çalışır?
-      </h2>
-      <div
-        class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center"
-      >
-        <div>
-          <div class="text-4xl mb-2">📝</div>
-          <h3 class="text-xl font-semibold mb-2 text-yellow-400">
-            1. Kayıt Ol
-          </h3>
-          <p class="text-gray-300">Profilini oluştur, yeteneklerini belirle.</p>
-        </div>
-        <div>
-          <div class="text-4xl mb-2">🔍</div>
-          <h3 class="text-xl font-semibold mb-2 text-yellow-400">2. Eşleş</h3>
-          <p class="text-gray-300">İlgili mentor veya menti ile eşleş.</p>
-        </div>
-        <div>
-          <div class="text-4xl mb-2">💬</div>
-          <h3 class="text-xl font-semibold mb-2 text-yellow-400">
-            3. Sohbet Et
-          </h3>
-          <p class="text-gray-300">İletişime geç, öğrenmeye başla!</p>
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-20 px-8">
+      <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 gradient-text">
+          How It Works
+        </h2>
+        <p class="text-gray-300 mb-12">Start mentoring in just 3 steps.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-gray-800 p-6 rounded-lg">
+            <h3 class="text-yellow-400 text-xl font-bold mb-2">
+              1. Create Your Profile
+            </h3>
+            <p class="text-gray-300">
+              Fill in your details and define your goals.
+            </p>
+          </div>
+          <div class="bg-gray-800 p-6 rounded-lg">
+            <h3 class="text-yellow-400 text-xl font-bold mb-2">
+              2. Get Matched
+            </h3>
+            <p class="text-gray-300">
+              We connect you with the most suitable mentors.
+            </p>
+          </div>
+          <div class="bg-gray-800 p-6 rounded-lg">
+            <h3 class="text-yellow-400 text-xl font-bold mb-2">
+              3. Start Mentoring
+            </h3>
+            <p class="text-gray-300">
+              Meet your mentor and work toward your goals.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- SSS -->
-    <section class="max-w-4xl mx-auto px-4 py-16">
-      <h2 class="text-3xl font-bold text-center mb-10 text-white">
-        Sıkça Sorulan Sorular
-      </h2>
-      <div class="space-y-4">
-        <details class="bg-gray-900 p-4 rounded-lg">
-          <summary class="cursor-pointer font-semibold text-yellow-400">
-            Mentorly ücretsiz mi?
-          </summary>
-          <p class="mt-2 text-gray-300">
-            Evet, Mentorly temel kullanımı tamamen ücretsizdir.
-          </p>
-        </details>
-        <details class="bg-gray-900 p-4 rounded-lg">
-          <summary class="cursor-pointer font-semibold text-yellow-400">
-            Nasıl mentor olabilirim?
-          </summary>
-          <p class="mt-2 text-gray-300">
-            Profilini oluşturduktan sonra mentor olarak başvuru yapabilirsin.
-          </p>
-        </details>
-        <details class="bg-gray-900 p-4 rounded-lg">
-          <summary class="cursor-pointer font-semibold text-yellow-400">
-            AI asistan nedir?
-          </summary>
-          <p class="mt-2 text-gray-300">
-            AI asistan, mentorluk hizmeti alamadığın zamanlarda sana yardımcı
-            olur.
-          </p>
-        </details>
+    <!-- FAQ Section -->
+    <section id="faq" class="bg-gray-900 py-20 px-8">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 gradient-text">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-gray-300 mb-12">Find answers to your questions here.</p>
+        <div class="space-y-6 text-left">
+          <details class="bg-gray-800 p-6 rounded-lg">
+            <summary class="text-yellow-400 font-semibold cursor-pointer">
+              Is Mentorly free?
+            </summary>
+            <p class="mt-2 text-gray-300">
+              Yes. Basic features are free. Premium features require a
+              subscription.
+            </p>
+          </details>
+          <details class="bg-gray-800 p-6 rounded-lg">
+            <summary class="text-yellow-400 font-semibold cursor-pointer">
+              How can I become a mentor?
+            </summary>
+            <p class="mt-2 text-gray-300">
+              You can apply after creating a profile. Approval is based on your
+              experience.
+            </p>
+          </details>
+          <details class="bg-gray-800 p-6 rounded-lg">
+            <summary class="text-yellow-400 font-semibold cursor-pointer">
+              How does the AI Assistant work?
+            </summary>
+            <p class="mt-2 text-gray-300">
+              The assistant offers 24/7 guidance, even when mentors are
+              unavailable.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 gradient-text">
+          Contact Us
+        </h2>
+        <p class="text-gray-300 mb-12">
+          Fill out the form below to get in touch.
+        </p>
+        <form class="space-y-6">
+          <input
+            type="text"
+            placeholder="Your Name"
+            class="w-full p-4 rounded-lg bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          />
+          <input
+            type="email"
+            placeholder="Your Email"
+            class="w-full p-4 rounded-lg bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          />
+          <textarea
+            placeholder="Your Message"
+            rows="5"
+            class="w-full p-4 rounded-lg bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          ></textarea>
+          <button
+            type="submit"
+            class="bg-yellow-400 text-black py-3 px-6 rounded-full font-medium btn-hover"
+          >
+            Send
+          </button>
+        </form>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black text-gray-500 text-center py-6">
-      <p>&copy; 2025 Mentorly | Tüm Hakları Saklıdır</p>
+    <footer class="text-center py-10 bg-black border-t border-gray-800 mt-12">
+      <p class="text-gray-500">© 2025 Mentorly. All rights reserved.</p>
     </footer>
+
+    <!-- AOS Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
